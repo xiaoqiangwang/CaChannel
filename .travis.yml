@@ -10,7 +10,7 @@ matrix:
     - os: linux
       env: MY_MINICONDA_VERSION=latest
     - os: osx
-      env: MY_MINICONDA_VERSION=lastest
+      env: MY_MINICONDA_VERSION=latest
 
 install:
   # Set the anaconda environment
