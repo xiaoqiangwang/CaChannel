@@ -12,7 +12,7 @@ matrix:
     - os: osx
       env:
         - MY_MINICONDA_VERSION=latest
-        - CONDA_BUILD_SYSROOT=$(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk
+        - CONDA_BUILD_SYSROOT="$(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
 
 install:
   # Set the anaconda environment
