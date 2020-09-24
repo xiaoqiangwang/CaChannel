@@ -16,7 +16,6 @@ matrix:
       osx_image: xcode12
 
 install:
-  - find `xcode-select -p`/Platforms/MacOSX.platform -iname  "macosx*.sdk" -type d
   # Set the anaconda environment
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
       curl https://repo.anaconda.com/miniconda/Miniconda3-${MY_MINICONDA_VERSION}-MacOSX-x86_64.sh -o miniconda.sh;
