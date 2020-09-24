@@ -3,6 +3,7 @@ sudo: required
 services:
   - docker
 
+
 language: cpp
 
 matrix:
@@ -11,6 +12,7 @@ matrix:
       env: MY_MINICONDA_VERSION=latest
     - os: osx
       env: MY_MINICONDA_VERSION=latest
+      osx_image: xcode12
 
 install:
   - find `xcode-select -p`/Platforms/MacOSX.platform -iname  "macosx*.sdk" -type d
