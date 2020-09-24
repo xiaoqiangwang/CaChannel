@@ -29,6 +29,7 @@ install:
 
 script:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      echo "CONDA_BUILD_SYSROOT: $(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk" >> conda-recipe/conda_build_config.yaml
       conda build -c ${MY_CONDA_CHANNEL} conda-recipe;
     else
       mkdir -m 0777 -p $HOME/miniconda/conda-bld/${TRAVIS_OS_NAME}-64;
