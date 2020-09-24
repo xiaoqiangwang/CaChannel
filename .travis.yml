@@ -10,7 +10,9 @@ matrix:
     - os: linux
       env: MY_MINICONDA_VERSION=latest
     - os: osx
-      env: MY_MINICONDA_VERSION=latest
+      env:
+        - MY_MINICONDA_VERSION=latest
+        - CONDA_BUILD_SYSROOT="$(xcode-select -p)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
       osx_image: xcode12
 
 install:
